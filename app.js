@@ -9,7 +9,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a,b){ //eslint-disable-line
-  return 'The sum of ' + a + ' and ' + b + ' is ' + (a + b);
+  var problem1Array = [];
+  problem1Array.push(a + b);
+  problem1Array.push('The sum of ' + a + ' and ' + b + ' is ' + (a + b));
+  return problem1Array;
 }
 
 // Here is the test for sum(); uncomment it to run it
