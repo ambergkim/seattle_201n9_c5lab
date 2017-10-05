@@ -30,10 +30,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a,b){ //eslint-disable-line
-  // var numbers = [];
-  // numbers.push(a * b);
-  // numbers.push('The product of ' + a + ' and ' + b + ' is ' + (a * b));
-  // return numbers;
+  var numbers = [];
+  numbers.push(a * b);
+  numbers.push('The product of ' + a + ' and ' + b + ' is ' + (a * b));
+  return numbers;
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -54,20 +54,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-  // var problem3Array = [];
-  // var element1a = sum(a, b);
-  // var element1b = sum(element1a, c);
-  // problem3Array.push(element1b);
-  // var element2a = multiply(a, b);
-  // var element2b = multiply(element2a, c);
-  // problem3Array.push(element2b);
-  // problem3Array.push(a + ' and ' + b + ' and ' + c + ' sum to ' + element1b);
-  // problem3Array.push('The product of ' + a + ' and ' + b + 'c' + ' is ' + element2b);
-  // return problem3Array;
+  var problem3Array = [];
+  var element1a = sum(a, b)[0];
+  var element1b = sum(element1a, c)[0];
+  problem3Array.push(element1b);
+  var element2a = multiply(a, b)[0];
+  var element2b = multiply(element2a, c)[0];
+  problem3Array.push(element2b);
+  problem3Array.push(a + ' and ' + b + ' and ' + c + ' sum to ' + element1b);
+  problem3Array.push('The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + element2b);
+  return problem3Array;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
