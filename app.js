@@ -11,7 +11,11 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a,b){ //eslint-disable-line
   var theSum = a + b;
   var message = 'The sum of ' + a + ' and ' + b + ' is ' + theSum + '.';
-  return [theSum, message];
+  var sumArray = [theSum, message];
+  var displaySum = document.getElementById('sum');
+  var displayText = document.createTextNode(sumArray);
+  displaySum.appendChild(displayText);
+  return sumArray;
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -31,7 +35,11 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a,b){ //eslint-disable-line
   var theProduct = a * b;
   var message = 'The product of ' + a + ' and ' + b + ' is ' + theProduct + '.';
-  return [theProduct, message];
+  var productArray = [theProduct, message];
+  var displayProduct = document.getElementById('product');
+  var displayText = document.createTextNode(productArray);
+  displayProduct.appendChild(displayText);
+  return productArray;
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -56,7 +64,11 @@ function sumAndMultiply(a,b,c){ //eslint-disable-line
   var theProduct = multiply(multiply(a,b)[0], c)[0];
   var message1 = a + ' and ' + b + ' and ' + c + ' sum to ' + theSum + '.';
   var message2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + theProduct + '.';
-  return [theSum, theProduct, message1, message2];
+  var sumMultiplyArray = [theSum, theProduct, message1, message2];
+  var displaySumMultiply = document.getElementById('sumProduct');
+  var displayText = document.createTextNode(sumMultiplyArray);
+  displaySumMultiply.appendChild(displayText);
+  return sumMultiplyArray;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -81,7 +93,11 @@ function sumArray(testArray){ //eslint-disable-line
   var firstSecondSum = sum(testArray[0], testArray[1])[0];
   var arraySum = sum(firstSecondSum, testArray[2])[0];
   var message =  testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + arraySum + ' is their sum.';
-  return [arraySum,message];
+  var sumArrayArray = [arraySum,message];
+  var displaySumArray = document.getElementById('sumArrayHTML');
+  var displayText = document.createTextNode(sumArrayArray);
+  displaySumArray.appendChild(displayText);
+  return sumArrayArray;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -105,7 +121,11 @@ function multiplyArray(testArray){ //eslint-disable-line
   var firstSecondProduct = multiply(testArray[0], testArray[1])[0];
   var arrayProduct = multiply(firstSecondProduct, testArray[2])[0];
   var message = 'The numbers ' + testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' have a product of ' + arrayProduct + '.';
-  return [arrayProduct, message];
+  var multiplyArrayArray = [arrayProduct, message];
+  var displayMultiplyArray = document.getElementById('multiplyArrayHTML');
+  var displayText = document.createTextNode(multiplyArrayArray);
+  displayMultiplyArray.appendChild(displayText);
+  return multiplyArrayArray;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
